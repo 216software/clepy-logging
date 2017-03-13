@@ -2,6 +2,7 @@
 
 import logging
 import logging.config
+import sys
 
 import clepylogconfig
 
@@ -16,10 +17,20 @@ def g():
 def h():
 	1/0
 
+
+def log_uncaught_exceptions(ex_cls, ex, tb):
+
+    log.critical(''.join(traceback.format_tb(tb)))
+    log.critical('{0}: {1}'.format(ex_cls, ex))
+
 if __name__ == "__main__":
 
 	# THIS IS WHERE THE CONFIGURATION HAPPENS!
 	logging.config.dictConfig(clepylogconfig.LOGGING)
+
+	# This line logs uncaught exceptions.  Remind me to talk about this
+	# later.
+	sys.excepthook = log_uncaught_exceptions
 
 	log.debug("DEBUG!")
 	log.info("INFO!")
@@ -32,4 +43,7 @@ if __name__ == "__main__":
 	except Exception as ex:
 		log.exception("OH NOES")
 
+	1/0
+
 	log.info("All done!")
+
