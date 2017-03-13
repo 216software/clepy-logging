@@ -22,4 +22,3 @@ if __name__ == "__main__":
 	all_buckets = s3conn.get_all_buckets()
 
 	log.info("All done!")
-

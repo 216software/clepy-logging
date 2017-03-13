@@ -15,7 +15,7 @@ LOGGING = {
         },
 
         'colorfmt': {
-            'format': "%(log_color)s%(asctime)-22s [%(process)d] %(name)-30s %(lineno)-5d %(levelname)-8s %(message)s",
+            'format': "%(log_color)s%(asctime)-22s %(message)s",
             '()': "colorlog.ColoredFormatter"
         },
     },

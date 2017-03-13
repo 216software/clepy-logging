@@ -1,0 +1,55 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+I don't judge you for using print statements but python's logging package is pretty fresh
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Really simple example
+=====================
+
+Run the a.py script.  You'll see colorized log statements in your
+console.
+
+You'll also see that it creates a file /tmp/clepy.log with more
+information.
+
+Set different log levels for different packages
+===============================================
+
+The boto package is great for working with Amazon web services (AWS).
+
+The script b.py shows how to use it.
+
+But boto produces a TON of debug-level logs!
+
+What's up with clepylogconfig?
+==============================
+
+*   loggers
+*   handlers
+*   formatters
+
+
+My favorite places to cram logs
+===============================
+
+*   local files
+*   email
+*   database
+*   graylog
+
+
+See also
+========
+
+The logrotate program is super nice.  If you log to local text files,
+you ought to set it up.  The RotatingFileHandler is
+
+Here's a post on the python logging package that I wrote almost ten
+years ago:
+
+http://blog.tplus1.com/blog/2007/09/28/the-python-logging-module-is-much-better-than-print-statements/
+
+And a talk I did at PyOhio in 2012 (when I thought silly chin beards looked cool):
+
+https://www.youtube.com/watch?v=tJqA6FgqJXs
+
+.. vim: set syntax=rst:
